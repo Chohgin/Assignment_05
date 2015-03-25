@@ -35,8 +35,10 @@ namespace Assignment_05
                     {
                         case 1:
                             {
-                                Console.WriteLine("Please enter the name of your file:");
+                                Console.WriteLine("Please enter the name of your file:");                                
                                 input = Console.ReadLine();
+                                Path.GetDirectoryName(input);
+                                
                                 try
                                 {
                                     // code found at http://www.dotnetperls.com/file
@@ -48,6 +50,12 @@ namespace Assignment_05
                                             string[] student = line.Split(',');
                                         }
                                     }
+                                    Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
+                                    Console.WriteLine();
+                                    Console.WriteLine("Please press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                    choice = 0;
                                 }
                                 catch(Exception error)
                                 {
@@ -57,12 +65,7 @@ namespace Assignment_05
                                     Console.Clear();
                                     choice = 0;
                                 }
-                                Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-                                Console.WriteLine();
-                                Console.WriteLine("Please press any key to continue");
-                                Console.ReadKey();
-                                Console.Clear();
-                                choice = 0;
+                                
                                 break;
                             }
                         case 2:
